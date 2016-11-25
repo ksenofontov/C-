@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication25
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int beeps = 0, i = 0, v = 0;
+            Random r = new Random();
+            beeps = r.Next(1, 11);
+            while (i != beeps){
+                Console.Beep();
+                i++;
+            }
+            Console.WriteLine("Сколько бипов вы услышали?");
+            v = int.Parse(Console.ReadLine());
+            if (v == beeps)
+            {
+                Console.WriteLine("Вы угадали!");
+            }
+            else Console.WriteLine("К сожалению нет");
+            Console.Read();
+        }
+    }
+}
