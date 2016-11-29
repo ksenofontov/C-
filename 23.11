@@ -22,7 +22,7 @@ namespace ConsoleApplication1
                     Console.Write(array[i] + " ");
                 }
                 Array.Reverse(array);
-                Console.WriteLine("Массив в обратном порядке:");
+                Console.WriteLine("\nМассив в обратном порядке:");
                 for (int i = 0; i < array.Length; i++)
                 {
                     Console.Write(array[i] + " ");
