@@ -1,0 +1,38 @@
+// Ксенофонтов Денис 10МИ3
+// Контрольная работа по массивам
+// 30.11.2016
+// вариант 12
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int[] mas = new int[120]; // объявляем массив размерностью 120 элементов
+            int s = 0; // иницаилизируем новую переменную s - счетчик
+            Random r = new Random();
+            Console.WriteLine("Элементы массива:");
+            for (int i = 0; i < mas.Length; i++) // заполняем массив случайными числами от -2 до 3
+            {
+                mas[i] = r.Next(-2, 3);
+                Console.Write(mas[i] + " , "); // выводим их
+            }
+            for (int i = 0; i < (mas.Length - 1); i++)
+            {
+                if (mas[i] == 0 && mas[i + 1] == 0) // проверяем, являются ли 2 подряд идущих элемента
+                {
+                    s++; // если да, то прибавляем к счетчику 1
+                }
+            }
+            Console.WriteLine("\nКоличество двух подряд идущих нулевых элементов: " + s);
+            Console.ReadLine();
+        }
+    }
+}
