@@ -1,0 +1,51 @@
+/* Контрольная работа 11.01.2017
+ * Вариант 12
+ * Ксенофонтов Денис 10МИ3 */
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = 7;
+            double min = 21.5;
+            double max = 38.2;
+            // massiv vvod
+            Console.WriteLine("Введите количество помещений на каждом этаже:");
+            int[] array = new int[5];
+            for (int i = 0; i < 5; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Элементы массива:");
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
+            // инициализация массива
+            double[,] mas = new double[5, n];
+            Random rand = new Random();
+            for (int i1 = 0; i1 < 5; i1++)
+                for (int j1 = 0; j1 < n; j1++)
+                {
+                    mas[i1, j1] = min + rand.NextDouble() * (max - min);
+                }
+            Console.WriteLine("Финальный массив:");
+            for (int i1 = 0; i1 < 5; i1++)
+            {
+                for (int j1 = 0; j1 < n; j1++)
+                {
+                    Console.Write(mas[i1, j1] + " ");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadKey();
+        }
+    }
+}
