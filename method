@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Comp
+    {
+        string b;
+        public string qwerty() 
+        {
+            b = Console.ReadLine();
+            return b;
+        }
+        public void write()
+        {
+            Comp np = new Comp();
+            np.qwerty();
+            if (b == "белый" || b == "синий" || b == "красный")
+            {
+                Console.Write(b + "- да");
+            }
+            else
+            {
+                Console.Write(b + "- нет");
+            }
+        }
+    }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Comp newop = new Comp();
+            newop.write();
+            Console.Read();
+        }
+    }
+}
