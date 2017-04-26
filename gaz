@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication2
+{
+    class Gas
+    {
+        Gas[] плг;
+        public double rate;
+        public int amount;
+        public double total;
+        public double payment
+        {
+            total = rate * amount;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+}
